@@ -51,7 +51,7 @@ class _AcmLogoState extends State<AcmLogo> with SingleTickerProviderStateMixin {
         );
       },
       child: Container(
-        width: 480.0,
+        width: 479.0,
         height: 450.0,
         decoration: BoxDecoration(
           color: Colors.white,

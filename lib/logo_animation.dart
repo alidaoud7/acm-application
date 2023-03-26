@@ -42,6 +42,8 @@ class _AcmLogoState extends State<AcmLogo> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return AnimatedBuilder(
       animation: _animation,
       builder: (context, child) {
@@ -51,8 +53,8 @@ class _AcmLogoState extends State<AcmLogo> with SingleTickerProviderStateMixin {
         );
       },
       child: Container(
-        width: 479.0,
-        height: 450.0,
+        width: 450,
+        height: 450,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10.0),

@@ -10,6 +10,8 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.white,
@@ -20,10 +22,11 @@ class LandingPage extends StatelessWidget {
           ),
           body: Column(
             children: [
-              AcmLogo(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
+              Container(child: AcmLogo()),
+              SizedBox(height: 20),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: TypeWrite(
                     textScaleFactor: 1,
                     seconds: 5,
@@ -37,7 +40,9 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SlideToRegisterButton(onRegistered: () {},),
+              Container(
+                  height:screenHeight * 0.2 ,
+                  child: SlideToRegisterButton(onRegistered: () {},)),
             ],
           )),
     );

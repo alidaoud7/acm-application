@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:acm_application/screens/bottom_navbar.dart';
 import 'package:acm_application/screens/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -74,9 +75,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     child: InkWell(
                       onTap: (){
-                        //Navigator.push(context,MaterialPageRoute(
-                        //builder: (context) => LoginScreen(),
-                        //));
+                        Navigator.push(context,MaterialPageRoute(
+                        builder: (context) => MainPage(),
+                        ));
                       },
                       child:Padding(padding: EdgeInsets.symmetric(vertical: 15, horizontal:40),
                         child: Center(
